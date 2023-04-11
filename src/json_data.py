@@ -4,6 +4,7 @@ from pytest_voluptuous import S
 
 
 class Json:
+    """Contains payloads for basic https methods and json schema validation tests."""
     # JSON for CRUD requests
     update_user = {
         'name': 'Tony',
@@ -108,3 +109,8 @@ class Json:
         "updatedAt": str
     })
 
+    login_schema = S(
+        {
+                "token": str
+        }
+    )

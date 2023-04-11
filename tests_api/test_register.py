@@ -6,12 +6,12 @@ url = 'https://reqres.in/api/register'
 
 
 def test_valid_registration():
-    """Creates a user"""
+    """Creates a user."""
     response = requests.post(url, data=Json.valid_user)
     data = response.json()
     assert response.status_code == 200, f'Expected 200 status, got {response.status_code} instead'
     assert data['token'] == 'QpwL5tke4Pnpja7X4'
-    assert S(Json.register_user_schema) == response.json()
+    assert S(Json.register_user_schema) == data, f'Expected {S(Json.register_user_schema)}, got {data} instead'
 
 
 def test_invalid_registration():
