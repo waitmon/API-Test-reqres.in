@@ -21,7 +21,7 @@ The following tests have been implemented:
  ```
  pip install -r requirements
  ```
-4) Run tests through the terminal
+3) Run tests through the terminal
 ```
 python -m pytest -v
 ```
